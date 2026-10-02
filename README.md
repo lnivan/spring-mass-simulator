@@ -64,7 +64,7 @@ python main.py
 
 ## Limitations
 
-- `Vector2.__mul__` computes the dot product as $x_1x_2 + y_1 + y_2$ instead of $x_1x_2 + y_1y_2$. Only the damper uses it, so damping is wrong for any spring that is not horizontal. In a headless test the string rose above its starting line during the first two seconds, which did not happen with a corrected dot product.
+- `Vector2.__mul__` computes the dot product as $x_1x_2 + y_1 + y_2$ instead of $x_1x_2 + y_1y_2$. Only the damper uses it, so damping goes wrong as soon as a spring tilts or its two ends move at different vertical speeds. In a headless test the string rose above its starting line during the first two seconds, which did not happen with a corrected dot product.
 - There is no clock: every frame advances the simulation by 0.0005 s, so the speed on screen depends on the machine.
 - The buttons only print `hola`, and the masses cannot be touched with the mouse. Changing the scene means editing `main.py`.
 - A spring with a rest length under 7 px crashes the drawing code with a division by zero, because its zigzag has no segments.
