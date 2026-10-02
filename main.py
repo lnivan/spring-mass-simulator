@@ -60,38 +60,99 @@ sistem.AddSpringJoint("spring4", "point4", "point5", 50, 10000)
 sistem.AddSpringJoint("spring5", "point5", "point6", 50, 10000)
 sistem.AddSpringJoint("spring6", "point6", "point7", 50, 10000)'''
 
-sistem.AddMassPoint("point1", Vector2(100, 400), 10000000, 0)
-sistem.AddMassPoint("point2", Vector2(150, 400), 50, 1000)
-sistem.AddMassPoint("point3", Vector2(200, 400), 50, 1000)
-sistem.AddMassPoint("point4", Vector2(250, 400), 50, 1000)
-sistem.AddMassPoint("point5", Vector2(300, 400), 50, 1000)
-sistem.AddMassPoint("point6", Vector2(350, 400), 5000, 1000)
-sistem.AddMassPoint("point7", Vector2(400, 400), 50, 1000)
-sistem.AddMassPoint("point8", Vector2(450, 400), 50, 1000)
-sistem.AddMassPoint("point9", Vector2(500, 400), 50, 1000)
-sistem.AddMassPoint("point10", Vector2(550, 400), 50, 1000)
-sistem.AddMassPoint("point11", Vector2(600, 400), 50, 1000)
-sistem.AddMassPoint("point12", Vector2(650, 400), 50, 1000)
-sistem.AddMassPoint("point13", Vector2(700, 400), 10000000, 0)
 
-sistem.AddSpringJoint("spring1", "point1", "point2", 50, 50000)
-sistem.AddSpringJoint("spring2", "point2", "point3", 50, 50000)
-sistem.AddSpringJoint("spring3", "point3", "point4", 50, 50000)
-sistem.AddSpringJoint("spring4", "point4", "point5", 50, 50000)
-sistem.AddSpringJoint("spring5", "point5", "point6", 50, 50000)
-sistem.AddSpringJoint("spring6", "point6", "point7", 50, 50000)
-sistem.AddSpringJoint("spring7", "point7", "point8", 50, 50000)
-sistem.AddSpringJoint("spring8", "point8", "point9", 50, 50000)
-sistem.AddSpringJoint("spring9", "point9", "point10", 50, 50000)
-sistem.AddSpringJoint("spring10", "point10", "point11", 50, 50000)
-sistem.AddSpringJoint("spring11", "point11", "point12", 50, 50000)
-sistem.AddSpringJoint("spring12", "point12", "point13", 50, 50000)
+
+
+
+
+
+
+
+
+sistem.AddMassPoint("point1", Vector2(80, 400), 10000000, 0)
+sistem.AddMassPoint("point2", Vector2(720, 400), 10000000, 0)
+
+string1 = sistem.AddString("string1", 50, Vector2(100, 400), Vector2(700, 400), 0.1, 2000, 20, 1000)
+
+sistem.AddSpringJoint("spring1", "point1", "string1point1", 20, 3000)
+sistem.AddSpringJoint("spring2", "string1point51", "point2", 20, 3000)
+
+
+
+'''g = 1000
+
+sistem.AddMassPoint("point1", Vector2(100, 700), 10000000, 0)
+sistem.AddMassPoint("point2", Vector2(100, 550), 10000000, 0)
+sistem.AddMassPoint("point3", Vector2(250, 700), 10, g)
+sistem.AddMassPoint("point4", Vector2(250, 550), 10, g)
+sistem.AddMassPoint("point5", Vector2(400, 700), 10, g)
+sistem.AddMassPoint("point6", Vector2(400, 550), 10, g)
+sistem.AddMassPoint("point7", Vector2(550, 700), 10, g)
+sistem.AddMassPoint("point8", Vector2(550, 550), 10, g)
+sistem.AddMassPoint("point9", Vector2(700, 700), 10, g)
+sistem.AddMassPoint("point10", Vector2(700, 550), 10, g)
+
+k = 1000
+damp = 100
+
+sistem.AddSpringJoint("spring1", "point1", "point3", 150, k, damp)
+sistem.AddSpringJoint("spring2", "point3", "point5", 150, k, damp)
+sistem.AddSpringJoint("spring3", "point5", "point7", 150, k, damp)
+sistem.AddSpringJoint("spring4", "point7", "point9", 150, k, damp)
+
+sistem.AddSpringJoint("spring5", "point2", "point4", 150, k, damp)
+sistem.AddSpringJoint("spring6", "point4", "point6", 150, k, damp)
+sistem.AddSpringJoint("spring7", "point6", "point8", 150, k, damp)
+sistem.AddSpringJoint("spring8", "point8", "point10", 150, k, damp)
+
+sistem.AddSpringJoint("spring9", "point3", "point4", 150, k, damp)
+sistem.AddSpringJoint("spring10", "point5", "point6", 150, k, damp)
+sistem.AddSpringJoint("spring11", "point7", "point8", 150, k, damp)
+sistem.AddSpringJoint("spring12", "point9", "point10", 150, k, damp)
+
+sistem.AddSpringJoint("spring13", "point1", "point4", 150 * 2**(1/2), k, damp)
+sistem.AddSpringJoint("spring14", "point3", "point6", 150 * 2**(1/2), k, damp)
+sistem.AddSpringJoint("spring15", "point5", "point8", 150 * 2**(1/2), k, damp)
+sistem.AddSpringJoint("spring16", "point7", "point10", 150 * 2**(1/2), k, damp)
+
+sistem.AddSpringJoint("spring17", "point2", "point3", 150 * 2**(1/2), k, damp)
+sistem.AddSpringJoint("spring18", "point4", "point5", 150 * 2**(1/2), k, damp)
+sistem.AddSpringJoint("spring19", "point6", "point7", 150 * 2**(1/2), k, damp)
+sistem.AddSpringJoint("spring20", "point8", "point9", 150 * 2**(1/2), k, damp)
+'''
+
+
+
+
 
 
 
 button1 = Button("pause", Vector2(680, 750), Vector2(100, 30), print, WindowSize)
 button2 = Button("point", Vector2(680, 710), Vector2(100, 30), print, WindowSize)
 button3 = Button("spring", Vector2(680, 670), Vector2(100, 30), print, WindowSize)
+
+
+
+
+
+
+
+'''point1 = sistem.AddMassPoint("point1", Vector2(400, 100), 10, 0)
+point2 = sistem.AddMassPoint("point2", Vector2(400, 700), 10, 0)
+sistem.AddSpringJoint("spring1", "point1", "point2", 200, 100, 1000)'''
+
+
+
+
+
+
+
+
+
+
+
+'''sistem.AddMassPoint("point1", Vector2(400, 700), 10000000, 0)
+sistem.AddString("string1", 30, Vector2(400, 40), Vector2(700, 400), 0.1, 3000, 20,1000)'''
 
 #sistem.AddMassPoint("point5", Vector2(500, 700), 100, 1000)
 
@@ -110,7 +171,7 @@ while running == True:
             running = False
 
 
-    sistem.SimulateStep(0.001)
+    sistem.SimulateStep(0.0005)
     button1.Update(events)
     button2.Update(events)
     button3.Update(events)
@@ -123,5 +184,5 @@ while running == True:
     pygame.display.flip()
 
 
-    fps.Update()
+   # fps.Update()
     #print(fps.FPS)
