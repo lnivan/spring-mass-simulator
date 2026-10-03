@@ -7,7 +7,6 @@
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Pygame](https://img.shields.io/badge/Pygame-2.x-30363D?style=flat-square)
 ![Status](https://img.shields.io/badge/status-prototype-BF8700?style=flat-square)
-![Year](https://img.shields.io/badge/year-2024-8250DF?style=flat-square)
 
 <img src="docs/preview.gif" alt="A thin string hanging between two large white circles starts straight, drops under gravity and swings up and down in waves" width="560">
 
@@ -69,10 +68,6 @@ python main.py
 - The buttons only print `hola`, and the masses cannot be touched with the mouse. Changing the scene means editing `main.py`.
 - A spring with a rest length under 7 px crashes the drawing code with a division by zero, because its zigzag has no segments.
 - `System.GetEnergy` is unfinished: it never returns a value, and its spring term is not a spring energy. Nothing calls it.
-
-## Background
-
-Started on 14 May 2024; the four original commits are from 14 and 15 May. The string builder and the current scene came later, and `Vector2` moved out of `physics.py` into its own module. The files were last edited on 23 May 2024, and `main.py` on 27 August 2024.
 
 ---
 
